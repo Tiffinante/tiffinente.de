@@ -1,0 +1,10 @@
+/* Set a background image by replacing the URL below */
+body {
+    /* background: url('https://images.unsplash.com/photo-1715356758153-6d58ae44e8fe?q=80&w=2664&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed; */
+    background: url("../img/marek-piwnicki-wgsu3WzFZ5c-unsplash.jpg") no-repeat center center fixed;
+    background-color: rgba(0, 0, 0, 0.6);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
