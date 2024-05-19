@@ -16,7 +16,8 @@ function setBackground(event) {
     event.preventDefault(); // Prevents the page view from changing (without this line the page scrolls up)
     const select = document.getElementById('backgroundSelect');
     const selectedBackground = select.value;
-    document.body.style.backgroundImage = `url('${selectedBackground}')`;
+    const backgroundDiv = document.getElementById('background');
+    backgroundDiv.style.backgroundImage = `url('${selectedBackground}')`;
 }
 
 // Event listener for the button
@@ -25,27 +26,19 @@ document.getElementById('setBackgroundButton').addEventListener('click', setBack
 // Set random background image when loading website
 window.onload = function() {
     const select = document.getElementById('backgroundSelect');
+    const backgroundDiv = document.getElementById('background');
     // Check that we are on the home.html page
     if (window.location.pathname.endsWith('privacy.html')) {
         const homeBackground = backgrounds[2]; // Picture 3
-        document.body.style.backgroundImage = `url('${homeBackground}')`;
+        backgroundDiv.style.backgroundImage = `url('${homeBackground}')`;
         select.value = homeBackground;
     } else if (window.location.pathname.endsWith('index.html')) {
         const homeBackground = backgrounds[1]; // Picture 2
-        document.body.style.backgroundImage = `url('${homeBackground}')`;
+        backgroundDiv.style.backgroundImage = `url('${homeBackground}')`;
         select.value = homeBackground;
     } else {
         const randomBackground = getRandomBackground();
-        document.body.style.backgroundImage = `url('${randomBackground}')`;
+        backgroundDiv.style.backgroundImage = `url('${randomBackground}')`;
         select.value = randomBackground;
     }
 }
-
-// Set random background image when loading website
-//window.onload = function() {
-//    const randomBackground = getRandomBackground();
-//    document.body.style.backgroundImage = `url('${randomBackground}')`;
-    // Set the dropdown menu to the random image
-//    const select = document.getElementById('backgroundSelect');
-//    select.value = randomBackground;
-//}
