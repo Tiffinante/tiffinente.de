@@ -1,18 +1,69 @@
+/* - smooth scroll - */
+* {
+    scroll-behavior: smooth;
+}
+
+
+
+/* - Background - */
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.0); /* Filter */
-    overflow-x: hidden; /* Verhindert horizontales Scrollen */
+    /* background-color: rgba(0, 0, 0, 0.3); /* filter */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 .background {
-    position: fixed;
+    position: fixed; /* ensures that the image remains static */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-size: cover;
     background-position: center;
-    z-index: -1; /* Stellt sicher, dass das Bild hinter dem Inhalt liegt */
+    z-index: -1; /* Ensure it's behind other content */
+}
+
+
+
+/* - Animated links - */
+.hover-right {
+    display: inline-block;
+    text-decoration: none; /* Removes the underline from the link */
+    transition: transform 0.3s ease; /* Animates the transformation */
+}
+
+.hover-right:hover {
+    transform: translateX(5px);
+}
+
+
+
+/* - language changer - */
+.tab {
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.tab.active {
+    font-weight: bold;
+}
+.tab.active img {
+    font-weight: bold;
+    border-bottom: 2px solid #333;
+    margin-bottom: 5px;
+}
+.content {
+    display: none;
+}
+.content.active {
+    display: block;
+}
+
+
+
+/* - Overwrite Bootstrap - */
+.footer {
+    background-color: rgb(248, 249, 250);
 }

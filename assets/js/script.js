@@ -1,3 +1,4 @@
+// Background
 // Array with the paths to the background images
 const backgrounds = [
     "./assets/img/backgrounds/marek-piwnicki-wgsu3WzFZ5c-unsplash.jpg",
@@ -32,13 +33,53 @@ window.onload = function() {
         const homeBackground = backgrounds[2]; // Picture 3
         backgroundDiv.style.backgroundImage = `url('${homeBackground}')`;
         select.value = homeBackground;
+    /*
     } else if (window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('')) {
         const homeBackground = backgrounds[1]; // Picture 2
         backgroundDiv.style.backgroundImage = `url('${homeBackground}')`;
         select.value = homeBackground;
+    */
     } else {
         const randomBackground = getRandomBackground();
         backgroundDiv.style.backgroundImage = `url('${randomBackground}')`;
         select.value = randomBackground;
     }
 }
+// !Background
+
+
+
+// Scroll Button
+var myButton = document.getElementById("upButton");
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        myButton.style.display = "block";
+    }
+    else {
+        myButton.style.display = "none";
+    }
+}
+
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+// !Scroll Button
+
+
+
+// language changer
+function changeLanguage(language) {
+    var tabs = document.querySelectorAll('.tab');
+    var contents = document.querySelectorAll('.content');
+    for (var i = 0; i < tabs.length; i++) {
+        tabs[i].classList.remove('active');
+        contents[i].classList.remove('active');
+        if (contents[i].id === language) {
+            tabs[i].classList.add('active');
+            contents[i].classList.add('active');
+        }
+    }
+}
+// !language changer
