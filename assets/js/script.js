@@ -32,7 +32,7 @@ window.onload = function() {
         const homeBackground = backgrounds[2]; // Picture 3
         backgroundDiv.style.backgroundImage = `url('${homeBackground}')`;
         select.value = homeBackground;
-    } else if (window.location.pathname.endsWith('index.html')) {
+    } else if (window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('')) {
         const homeBackground = backgrounds[1]; // Picture 2
         backgroundDiv.style.backgroundImage = `url('${homeBackground}')`;
         select.value = homeBackground;
