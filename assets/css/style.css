@@ -1,3 +1,5 @@
+@import "bootstrap@5.3.3-min.css";
+
 /* - smooth scroll - */
 * {
     scroll-behavior: smooth;
@@ -33,7 +35,6 @@ body, html {
     text-decoration: none; /* Removes the underline from the link */
     transition: transform 0.3s ease; /* Animates the transformation */
 }
-
 .hover-right:hover {
     transform: translateX(5px);
 }
@@ -41,29 +42,24 @@ body, html {
 
 
 /* - language changer - */
-.tab {
-    display: inline-block;
-    margin-right: 10px;
-    cursor: pointer;
-}
-.tab.active {
-    font-weight: bold;
-}
-.tab.active img {
-    font-weight: bold;
-    border-bottom: 2px solid #333;
-    margin-bottom: 5px;
-}
 .content {
     display: none;
 }
 .content.active {
     display: block;
 }
+.nav-link.active img {
+    border-bottom: 1px solid #333;
+    background-color: rgba(248, 249, 250, var(1)) !important;
+}
+.nav-link.active.bg-body-secondary.border-bottom-0 {
+    background-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
+}
 
 
 
-/* - Overwrite Bootstrap - */
+/* - footer - */
 .footer {
     background-color: rgb(248, 249, 250);
 }
+

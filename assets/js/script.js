@@ -69,17 +69,4 @@ function topFunction() {
 
 
 
-// language changer
-function changeLanguage(language) {
-    var tabs = document.querySelectorAll('.tab');
-    var contents = document.querySelectorAll('.content');
-    for (var i = 0; i < tabs.length; i++) {
-        tabs[i].classList.remove('active');
-        contents[i].classList.remove('active');
-        if (contents[i].id === language) {
-            tabs[i].classList.add('active');
-            contents[i].classList.add('active');
-        }
-    }
-}
-// !language changer
+//

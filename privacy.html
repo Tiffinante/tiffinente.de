@@ -26,15 +26,23 @@
         <h1 class="display-3 fw-bolder text-white p-5">Privacy policy / Imprint</h1>
     </div>
 
-    <div style="height: 20vh;"></div>
+    <div style="height: 15vh;"></div>
 
-    <div class="mb-5 bg-white shadow  bg-body-tertiary rounded p-4">
-        <div class="tabs text-end">
-            <div class="tab active" onclick="changeLanguage('en')"><img src="assets/img/icons/United-Kingdom-flag-32x32.png" alt="Flag of the United-Kingdom"></div>
-            <div class="tab" onclick="changeLanguage('de')"><img src="assets/img/icons/Germany-flag-32x32.png" alt="Flag of Germany"></div>
-        </div>
-        <div class="m-4">
-            <div id="en" class="content active">
+    <ul class="nav nav-tabs justify-content-end border-bottom-0" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active bg-body-secondary border-bottom-0" id="en-tab" data-bs-toggle="tab" data-bs-target="#en-tab-pane" type="button" role="tab" aria-controls="en-tab-pane" aria-selected="true">
+                <img src="assets/img/icons/United-Kingdom-flag-32x32.png" alt="Flag of the United-Kingdom">
+            </button>
+        </li>
+        <li class="nav-item mx-1 me-2" role="presentation">
+            <button class="nav-link bg-body-secondary border-bottom-0" id="de-tab" data-bs-toggle="tab" data-bs-target="#de-tab-pane" type="button" role="tab" aria-controls="de-tab-pane" aria-selected="false">
+                <img src="assets/img/icons/Germany-flag-32x32.png" alt="Flag of Germany">
+            </button>
+        </li>
+    </ul>
+    <div class="mb-5 shadow-lg bg-body-tertiary rounded p-4">
+        <div class="tab-content m-4" id="myTabContent">
+            <div class="content active" id="en-tab-pane" role="tabpanel" aria-labelledby="en-tab" tabindex="0">
                 <h3>1. General Information About the Website</h3>
                 <p class="pb-5 text-break fs-5">This website (hereinafter "the website") is a purely informational platform that neither stores nor requests personal data from visitors. The use of the website is completely anonymous and no data is collected, stored, or processed.</p>
 
@@ -67,7 +75,7 @@
                 <br>
                 <p class="text-break fs-5">These legal notices are valid from the time of publication and replace all previous versions.</p>
             </div>
-            <div id="de" class="content">
+            <div class="content" id="de-tab-pane" role="tabpanel" aria-labelledby="de-tab" tabindex="0">
                 <h3>1. Allgemeine Informationen zur Webseite</h3>
                 <p class="pb-5 text-break fs-5">Diese Webseite (im Folgenden "die Webseite") ist eine rein informative Plattform, die weder personenbezogene Daten von Besuchern speichert noch anfordert. Die Nutzung der Webseite ist vollständig anonym und es werden keine Daten erhoben, gespeichert oder verarbeitet.</p>
 
@@ -104,11 +112,9 @@
     </div>
 
 </div>
-
-<div style="height: 10vh;"></div>
 <!-- !Main content -->
 
-
+<div style="height: 10vh;"></div>
 
 <!-- footer -->
 <div class="footer">
@@ -122,7 +128,14 @@
                         <li class="nav-item mb-2 hover-right"><a href="./" class="nav-link p-0 text-body-secondary">Home</a></li>
                         <li class="nav-item mb-2 hover-right"><a href="./" class="nav-link p-0 text-body-secondary">Home</a></li>
                         <li class="nav-item mb-2 hover-right"><a href="./" class="nav-link p-0 text-body-secondary">Home</a></li>
-                        <li class="nav-item mb-2 hover-right"><a href="./" class="nav-link p-0 text-body-secondary">Home</a></li>
+                        <li class="nav-item mb-2 ">
+                            <a class="icon-link icon-link-hover" href="./inventory.html">
+                                All topics
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                                </svg>
+                            </a>
+                        </li>
                     </ul>
                 </div>
 
@@ -132,7 +145,7 @@
                         <li class="nav-item mb-2 hover-right"><a href="./" class="nav-link p-0 text-body-secondary">Home</a></li>
                         <li class="nav-item mb-2 hover-right"><a href="./privacy.html" class="nav-link p-0 text-body-secondary">Privacy policy</a></li>
                         <li class="nav-item mb-2 hover-right"><a href="./privacy.html" class="nav-link p-0 text-body-secondary">Imprint</a></li>
-                        <li class="nav-item mb-2 hover-right"><a href="./licensing.html" class="nav-link p-0 text-body-secondary">Licensing</a></li>
+                        <li class="nav-item mb-2 hover-right"><a href="./licensing.html" class="nav-link p-0 text-body-secondary">Licenses</a></li>
                     </ul>
                 </div>
 
@@ -142,18 +155,18 @@
                         <label for="backgroundSelect" class="h5">Choose a different wallpaper:</label>
                         <div id="divbackgroundSelect">
                             <div class="d-flex gap-2">
-                                <select id="backgroundSelect" class="form-select" disabled>
-                                    <option value="./assets/img/backgrounds/marek-piwnicki-wgsu3WzFZ5c-unsplash.jpg">Bild 1</option>
-                                    <option value="./assets/img/backgrounds/marek-piwnicki-zbowrjiVx2c-unsplash.jpg">Bild 2</option>
-                                    <option value="./assets/img/backgrounds/marek-piwnicki-ZuI0QS361bg-unsplash.jpg">Bild 3</option>
+                                <select id="backgroundSelect" class="form-select">
+                                    <option value="./assets/img/backgrounds/marek-piwnicki-wgsu3WzFZ5c-unsplash.jpg">Wallpaper 1</option>
+                                    <option value="./assets/img/backgrounds/marek-piwnicki-zbowrjiVx2c-unsplash.jpg">Wallpaper 2</option>
+                                    <option value="./assets/img/backgrounds/marek-piwnicki-ZuI0QS361bg-unsplash.jpg">Wallpaper 3</option>
                                 </select>
-                                <button id="setBackgroundButton" class="btn btn-success" title="Use selected background image" disabled>Choose</button>
+                                <button id="setBackgroundButton" class="btn btn-success" title="Use selected background image">Choose</button>
                             </div>
                             <p class="text-body-secondary">Wallpapers from: <a href="https://unsplash.com/de/@marekpiwnicki" target="_blank" class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover text-body-secondary">Marek Piwnicki - Unsplash</a></p>
+                            <br>
                         </div>
                     </form>
                     <div class="float-end">
-                        <br>
                         <button onclick="topFunction()" id="upButton" title="Go to the top" class="icon-link icon-link-hover btn btn btn-outline-dark" style="--bs-icon-link-transform: translate3d(0, -.225rem, 0);">
                             Up
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
@@ -165,7 +178,11 @@
             </div>
 
             <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-                <p class="text-body-secondary">Tiffinante.de</p>
+                <p class="text-body-secondary">
+                    <a href="https://tiffinante.de" class="link-offset-2 link-underline link-underline-opacity-0 text-body-secondary">
+                        Tiffinante.de
+                    </a>
+                </p>
                 <ul class="list-unstyled d-flex">
                     <li class="ms-3">
                         <a class="text-body-secondary icon-link-hover" style="--bs-icon-link-transform: translate3d(0, -.225rem, 0);" href="https://www.youtube.com/channel/UCrOWsL6hQycFyEP0Y9b-qxw">
@@ -190,6 +207,7 @@
 
 <!-- script -->
 <script src="./assets/js/script.js"></script>
+<script src="./assets/js/bootstrap@5.3.3-min.js"></script>
 <!-- !script -->
 </body>
 </html>
