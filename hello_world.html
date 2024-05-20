@@ -27,6 +27,19 @@
         <div class="bg-white ">
             <div class="text-center">
                 <h1 class="display-1">Hello World, from Tiffinante!</h1>
+
+                <!-- alert -->
+                <div class="alert alert-warning alert-dismissible fade show d-flex" role="alert">
+                    <div class="justify-content-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-triangle-fill" viewBox="0 0 16 16">
+                            <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5m.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                        </svg>
+                        Most of the texts are currently still placeholders, as the website is still under <strong>development</strong>!
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <!-- !alert -->
+
             </div>
             <hr>
 
@@ -104,7 +117,7 @@
                         <div id="divbackgroundSelect">
                             <div class="d-flex gap-2">
                                 <select id="backgroundSelect" class="form-select" disabled>
-                                    <option selected>White</option>
+                                    <option selected>White / None</option>
                                     <option value="./assets/img/backgrounds/marek-piwnicki-wgsu3WzFZ5c-unsplash.jpg">Wallpaper 1</option>
                                     <option value="./assets/img/backgrounds/marek-piwnicki-zbowrjiVx2c-unsplash.jpg">Wallpaper 2</option>
                                     <option value="./assets/img/backgrounds/marek-piwnicki-ZuI0QS361bg-unsplash.jpg">Wallpaper 3</option>
@@ -153,6 +166,7 @@
 
 <!-- script -->
 <script src="./assets/js/script.js"></script>
+<script src="./assets/js/bootstrap@5.3.3-min.js"></script>
 <!-- !script -->
 </body>
 </html>

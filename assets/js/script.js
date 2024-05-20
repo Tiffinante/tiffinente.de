@@ -52,11 +52,9 @@ window.onload = function() {
 // Scroll Button
 document.addEventListener("DOMContentLoaded", function() {
     var upButton = document.getElementById("myBtn");
-
     window.onscroll = function() {
         scrollFunction();
     };
-
     function scrollFunction() {
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
             upButton.classList.add("show");
@@ -72,17 +70,15 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
     }
-
     upButton.onclick = function() {
         topFunction();
     };
-
     function topFunction() {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }
 });
-
+// !Scroll Button
 
 
 

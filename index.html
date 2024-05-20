@@ -28,10 +28,33 @@
 
 
 
-<!-- Title Screen -->
+<!-- Title Screen (alert here) -->
 <div id="title" class="d-flex justify-content-center align-items-center" style="height: 100vh;">
     <div class="text-center">
         <h1 class="display-1 fw-bolder text-white">Tiffinante.de</h1>
+
+        <!-- alert -->
+        <div class="alert alert-warning alert-dismissible fade show d-flex" role="alert">
+            <div class="justify-content-start">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-triangle-fill" viewBox="0 0 16 16">
+                    <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5m.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                </svg>
+                Most of the texts are currently still placeholders, as the website is still under <strong>development</strong>!
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <!-- !alert -->
+
+        <div class="alert alert-info alert-dismissible fade show d-flex" role="alert">
+            <div class="justify-content-start">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                </svg>
+                This site does <strong>not</strong> store any type of cookies!
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
 
         <a class="icon-link icon-link-hover btn btn btn-outline-light" style="--bs-icon-link-transform: translate3d(0, +.225rem, 0);" href="#section2">
             take a look
@@ -48,13 +71,6 @@
 -->
 
 <!-- Main content -->
-<div class="container alert alert-warning d-flex align-items-center gap-2" role="alert">
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-triangle-fill" viewBox="0 0 16 16">
-        <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5m.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
-    </svg>
-    <div>Most of the texts are currently still placeholders, as the website is still under <strong>development</strong>!</div>
-</div>
-
 <div id="section2" class="container">
     <div class="bg-white rounded shadow">
         <div class="text-center">
@@ -181,6 +197,7 @@
                         <div id="divbackgroundSelect">
                             <div class="d-flex gap-2">
                                 <select id="backgroundSelect" class="form-select">
+                                    <option disabled>White / None</option>
                                     <option value="./assets/img/backgrounds/marek-piwnicki-wgsu3WzFZ5c-unsplash.jpg">Wallpaper 1</option>
                                     <option value="./assets/img/backgrounds/marek-piwnicki-zbowrjiVx2c-unsplash.jpg">Wallpaper 2</option>
                                     <option value="./assets/img/backgrounds/marek-piwnicki-ZuI0QS361bg-unsplash.jpg">Wallpaper 3</option>
@@ -229,6 +246,7 @@
 
 <!-- script -->
 <script src="./assets/js/script.js"></script>
+<script src="./assets/js/bootstrap@5.3.3-min.js"></script>
 <!-- !script -->
 </body>
 </html>
