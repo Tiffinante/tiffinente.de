@@ -1,5 +1,7 @@
 @import "bootstrap@5.3.3-min.css";
 
+
+
 /* - smooth scroll - */
 * {
     scroll-behavior: smooth;
@@ -14,7 +16,7 @@ body, html {
     height: 100%;
     width: 100%;
     /* background-color: rgba(0, 0, 0, 0.3); /* filter */
-    overflow-x: hidden; /* Prevents horizontal scrolling */
+    /* overflow-x: hidden; /* Prevents horizontal scrolling but hides Scrollup buton*/
 }
 .background {
     position: fixed; /* ensures that the image remains static */
@@ -63,3 +65,94 @@ body, html {
     background-color: rgb(248, 249, 250);
 }
 
+
+
+/* Button for Scrolling up */
+#myBtn {
+    visibility: hidden; /* Button standardmäßig unsichtbar */
+    position: fixed; /* Position des Buttons festlegen */
+    bottom: 20px; /* Abstand vom unteren Rand */
+    right: 30px; /* Abstand vom rechten Rand */
+    z-index: 99; /* Über anderen Elementen positionieren */
+    background-color: #e9ecef; /* Hintergrundfarbe */
+    color: black; /* Schriftfarbe */
+    border: none; /* Kein Rand */
+    outline: none; /* Kein Rahmen beim Fokus */
+    cursor: pointer; /* Zeiger ändern */
+    padding: 15px; /* Innenabstand */
+    border-radius: 50%; /* Runde Form */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Schatten für 3D-Effekt */
+    opacity: 0; /* Startwert der Opazität */
+    transform: translateY(20px) scale(0.8); /* Startposition leicht unter dem sichtbaren Bereich und verkleinert */
+    transition: opacity 0.4s, transform 0.4s; /* Übergänge für Opazität und Transformation */
+    width: 56px; /* Breite des Buttons festlegen */
+}
+
+#myBtn.show {
+    visibility: visible; /* Button sichtbar */
+    opacity: 1; /* Volle Sichtbarkeit */
+    transform: translateY(0) scale(1); /* Normale Position und Größe */
+    animation: bounceIn 0.5s; /* Bounce-In-Animation */
+}
+
+#myBtn.hide {
+    animation: bounceOut 0.5s; /* Bounce-Out-Animation */
+    opacity: 0; /* Verbergen */
+    transform: translateY(20px) scale(0.8); /* Verkleinern und nach unten verschieben */
+}
+
+#myBtn:hover {
+    background-color: #333; /* Dunklere Hintergrundfarbe bei Hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Größerer Schatten bei Hover */
+}
+
+#myBtn svg {
+    width: 24px;
+    height: 24px;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: translateY(50px) scale(0.5);
+        opacity: 0;
+    }
+    60% {
+        transform: translateY(-10px) scale(1.1);
+        opacity: 1;
+    }
+    80% {
+        transform: translateY(5px) scale(0.9);
+    }
+    100% {
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes bounceOut {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    20% {
+        transform: translateY(-10px) scale(1.1);
+    }
+    100% {
+        transform: translateY(50px) scale(0.5);
+        opacity: 0;
+    }
+}
+
+/* Medienabfrage für kleinere Bildschirmgrößen */
+@media (max-width: 600px) {
+    #myBtn {
+        padding: 10px; /* Kleinere Polsterung */
+        width: 46px; /* Breite des Buttons anpassen */
+        bottom: 15px; /* Weniger Abstand vom unteren Rand */
+        right: 15px; /* Weniger Abstand vom rechten Rand */
+    }
+
+    #myBtn svg {
+        width: 18px;
+        height: 18px;
+    }
+}

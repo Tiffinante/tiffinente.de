@@ -9,48 +9,40 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <!-- !css -->
     <link rel="icon" type="image/x-icon" href="assets/img/icons/tiffinante_tr_full_face_128x128.png">
-    <title>Tiffinante.de - All topics</title>
+    <title>Tiffinante.de - Posts</title>
 </head>
 <body>
 
-
+<!-- Button for Scrolling up -->
+<button onclick="topFunction()" id="myBtn" title="Go to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5"/>
+    </svg>
+</button>
+<!-- Button for Scrolling up -->
 
 <!-- Main content -->
 <div class="container">
 
     <div class="text-center m-5">
-        <h1 class="display-3 fw-bolder p-5">All topics</h1>
+        <h1 class="display-3 fw-bolder p-5">Posts</h1>
     </div>
 
     <div id="section2" class="container">
         <div class="bg-white">
             <hr>
             <div class="mx-4">
-                <h4>Lorem</h4>
                 <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                    <a href="./hello_world.html" class="list-group-item list-group-item-action">
                         <div class="d-flex w-100 justify-content-between">
-                            <h5 class="mb-1">List group item heading</h5>
-                            <small>3 days ago</small>
+                            <h5 class="mb-1">
+                                Hello World, from Tiffinante!
+                                <span class="badge text-bg-primary rounded-pill text-end">New</span>
+                            </h5>
+                            <small class="text-body-secondary">19.05.2024</small>
                         </div>
-                        <p class="mb-1">Some placeholder content in a paragraph.</p>
-                        <small>And some small print.</small>
-                    </a>
-                    <a href="#" class="list-group-item list-group-item-action">
-                        <div class="d-flex w-100 justify-content-between">
-                            <h5 class="mb-1">List group item heading</h5>
-                            <small class="text-body-secondary">3 days ago</small>
-                        </div>
-                        <p class="mb-1">Some placeholder content in a paragraph.</p>
-                        <small class="text-body-secondary">And some muted small print.</small>
-                    </a>
-                    <a href="#" class="list-group-item list-group-item-action">
-                        <div class="d-flex w-100 justify-content-between">
-                            <h5 class="mb-1">List group item heading</h5>
-                            <small class="text-body-secondary">3 days ago</small>
-                        </div>
-                        <p class="mb-1">Some placeholder content in a paragraph.</p>
-                        <small class="text-body-secondary">And some muted small print.</small>
+                        <p class="mb-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                        <small class="text-body-secondary">At varius vel pharetra vel turpis nunc eget lorem dolor.</small>
                     </a>
                 </div>
             </div>
@@ -68,15 +60,15 @@
         <footer class="pt-5">
             <div class="row">
                 <div class="col-9 col-md-3 mb-4">
-                    <h5>Recommended</h5>
+                    <h5>Posts</h5>
                     <ul class="nav flex-column">
                         <li class="nav-item mb-2 hover-right"><a href="./hello_world.html" class="nav-link p-0 text-body-secondary">Hello World</a></li>
-                        <li class="nav-item mb-2 hover-right"><a href="./" class="nav-link p-0 text-body-secondary">Home</a></li>
-                        <li class="nav-item mb-2 hover-right"><a href="./" class="nav-link p-0 text-body-secondary">Home</a></li>
-                        <li class="nav-item mb-2 hover-right"><a href="./" class="nav-link p-0 text-body-secondary">Home</a></li>
+                        <li class="nav-item mb-2 hover-right"><a href="#" class="nav-link p-0 text-body-secondary">Placeholder</a></li>
+                        <li class="nav-item mb-2 hover-right"><a href="#" class="nav-link p-0 text-body-secondary">Placeholder</a></li>
+                        <li class="nav-item mb-2 hover-right"><a href="#" class="nav-link p-0 text-body-secondary">Placeholder</a></li>
                         <li class="nav-item mb-2 ">
-                            <a class="icon-link icon-link-hover" href="./inventory.html">
-                                All topics
+                            <a class="icon-link icon-link-hover p-0 text-body-emphasis link-underline link-underline-opacity-0" href="./posts.html">
+                                All posts
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
                                 </svg>
@@ -114,12 +106,9 @@
                         </div>
                     </form>
                     <div class="float-end">
-                        <button onclick="topFunction()" id="upButton" title="Go to the top" class="icon-link icon-link-hover btn btn btn-outline-dark" style="--bs-icon-link-transform: translate3d(0, -.225rem, 0);">
-                            Up
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5"/>
-                            </svg>
-                        </button>
+                        <a class="btn btn btn-outline-dark" title="Back to home page" href="./index.html">
+                            Home
+                        </a>
                     </div>
                 </div>
             </div>

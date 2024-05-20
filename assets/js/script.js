@@ -50,23 +50,39 @@ window.onload = function() {
 
 
 // Scroll Button
-var myButton = document.getElementById("upButton");
-window.onscroll = function() {scrollFunction()};
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        myButton.style.display = "block";
+document.addEventListener("DOMContentLoaded", function() {
+    var upButton = document.getElementById("myBtn");
+
+    window.onscroll = function() {
+        scrollFunction();
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            upButton.classList.add("show");
+            upButton.classList.remove("hide");
+        } else {
+            if (!upButton.classList.contains("hide")) {
+                upButton.classList.add("hide");
+                upButton.addEventListener('animationend', function() {
+                    if (upButton.classList.contains("hide")) {
+                        upButton.classList.remove("show");
+                    }
+                }, { once: true });
+            }
+        }
     }
-    else {
-        myButton.style.display = "none";
+
+    upButton.onclick = function() {
+        topFunction();
+    };
+
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
     }
-}
-
-function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-}
-// !Scroll Button
+});
 
 
 
-//
+

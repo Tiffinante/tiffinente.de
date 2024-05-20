@@ -13,6 +13,15 @@
 </head>
 
 <body>
+
+<!-- Button for Scrolling up -->
+<button onclick="topFunction()" id="myBtn" title="Go to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5"/>
+    </svg>
+</button>
+<!-- Button for Scrolling up -->
+
 <!-- Background -->
 <div id="background" class="background"></div>
 <!-- !Background -->
@@ -138,15 +147,15 @@
         <footer class="pt-5">
             <div class="row">
                 <div class="col-9 col-md-3 mb-4">
-                    <h5>Recommended</h5>
+                    <h5>Posts</h5>
                     <ul class="nav flex-column">
                         <li class="nav-item mb-2 hover-right"><a href="./hello_world.html" class="nav-link p-0 text-body-secondary">Hello World</a></li>
-                        <li class="nav-item mb-2 hover-right"><a href="./" class="nav-link p-0 text-body-secondary">Home</a></li>
-                        <li class="nav-item mb-2 hover-right"><a href="./" class="nav-link p-0 text-body-secondary">Home</a></li>
-                        <li class="nav-item mb-2 hover-right"><a href="./" class="nav-link p-0 text-body-secondary">Home</a></li>
+                        <li class="nav-item mb-2 hover-right"><a href="#" class="nav-link p-0 text-body-secondary">Placeholder</a></li>
+                        <li class="nav-item mb-2 hover-right"><a href="#" class="nav-link p-0 text-body-secondary">Placeholder</a></li>
+                        <li class="nav-item mb-2 hover-right"><a href="#" class="nav-link p-0 text-body-secondary">Placeholder</a></li>
                         <li class="nav-item mb-2 ">
-                            <a class="icon-link icon-link-hover" href="./inventory.html">
-                                All topics
+                            <a class="icon-link icon-link-hover p-0 text-body-emphasis link-underline link-underline-opacity-0" href="./posts.html">
+                                All posts
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
                                 </svg>
@@ -183,12 +192,9 @@
                         </div>
                     </form>
                     <div class="float-end">
-                        <button onclick="topFunction()" id="upButton" title="Go to the top" class="icon-link icon-link-hover btn btn btn-outline-dark" style="--bs-icon-link-transform: translate3d(0, -.225rem, 0);">
-                            Up
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5"/>
-                            </svg>
-                        </button>
+                        <a class="btn btn btn-outline-dark" title="Back to home page" href="./index.html">
+                            Home
+                        </a>
                     </div>
                 </div>
             </div>
