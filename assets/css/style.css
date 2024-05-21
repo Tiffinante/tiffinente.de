@@ -67,7 +67,7 @@ body, html {
 
 
 
-/* Button for Scrolling up */
+/* - Button to scroll up - */
 #myBtn {
     visibility: hidden;
     position: fixed;
@@ -87,29 +87,24 @@ body, html {
     transition: opacity 0.4s, transform 0.4s;
     width: 56px;
 }
-
 #myBtn.show {
     visibility: visible;
     opacity: 1;
     transform: translateY(0) scale(1);
     animation: bounceIn 0.5s;
 }
-
 #myBtn.hide {
     animation: bounceOut 0.5s;
     opacity: 0;
     transform: translateY(20px) scale(0.8);
 }
-
 #myBtn:hover {
     /* background-color: #dee2e6; */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
-
 #myBtn:hover svg {
     transform: translateY(-5px);
 }
-
 #myBtn svg {
     width: 24px;
     height: 24px;
@@ -132,7 +127,6 @@ body, html {
         transform: translateY(0) scale(1);
     }
 }
-
 @keyframes bounceOut {
     0% {
         transform: translateY(0) scale(1);
@@ -146,7 +140,6 @@ body, html {
         opacity: 0;
     }
 }
-
 /* Media query for smaller screen sizes */
 @media (max-width: 600px) {
     #myBtn {
@@ -155,9 +148,87 @@ body, html {
         bottom: 15px;
         right: 15px;
     }
-
     #myBtn svg {
         width: 18px;
         height: 18px;
     }
+}
+
+
+
+/* flyin */
+.flyin {
+    opacity: 0;
+    animation-duration: 1.25s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes flyInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes flyInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes flyInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes flyInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.flyin-left {
+    animation-name: flyInLeft;
+}
+.flyin-right {
+    animation-name: flyInRight;
+}
+.flyin-top {
+    animation-name: flyInTop;
+}
+.flyin-bottom {
+    animation-name: flyInBottom;
+}
+
+.flyin-delay-1 {
+    animation-delay: 0.25s;
+}
+.flyin-delay-2 {
+    animation-delay: 0.5s;
+}
+.flyin-delay-3 {
+    animation-delay: 0.75s;
+}
+.flyin-delay-4 {
+    animation-delay: 1s;
+}
+.flyin-delay-5 {
+    animation-delay: 2s;
 }
